@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Recommender</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="mb-4">🎵 Music Recommendation System</h1>
+    <form action="/recommend" method="POST">
+      <div class="mb-3">
+        <label for="mood" class="form-label">Choose your mood:</label>
+        <select class="form-select" name="mood" required>
+          <option>Happy</option>
+          <option>Sad</option>
+          <option>Energetic</option>
+          <option>Calm</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="genre" class="form-label">Preferred Genre:</label>
+        <input type="text" class="form-control" name="genre" placeholder="e.g. Pop, Rock" required>
+      </div>
+      <div class="mb-3">
+        <label for="text_input" class="form-label">Anything else? (optional)</label>
+        <input type="text" class="form-control" name="text_input">
+      </div>
+      <button type="submit" class="btn btn-primary">Get Recommendations</button>
+    </form>
+  </div>
+</body>
+</html>
